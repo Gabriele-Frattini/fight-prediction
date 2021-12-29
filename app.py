@@ -1,0 +1,38 @@
+import streamlit as st
+import numpy as np
+import pickle
+from pathlib import Path
+
+load_model = pickle.load(open('model.pkl', 'rb'))
+
+
+def predict_fight(draws, losses, wins, opponent_wins, opponent_losses, opponent_draws, Height_Difference, Age_Difference):
+    input = np.array([[draws, losses, wins, opponent_wins,
+                     opponent_losses, opponent_draws, Height_Difference, Age_Difference]]).astype(np.float64)
+    prediction = load_model.predict(input)
+    return prediction
+
+
+def main():
+    st.title("Predict the result for our fighter")
+
+    wins = st.slider("Wins", 1, 70,10)
+    losses = st.slider("Losses", 1, 70,10)
+    draws = st.slider("Draws", 1, 70,10)
+    age = st.slider("Age",17,55,25)
+    height = st.slider("Height",150,220,175)
+    opponent_wins = st.slider("Opponent wins", 1, 70,10)
+    opponent_losses = st.slider("Opponent losses", 1, 70,10)
+    opponent_draws = st.slider("Opponent draws", 1, 70,10)
+    age_opponent = st.slider("Opponent age",17,55,15)
+    height_opponent = st.slider("Opponent height",150,220,175)
+    ok = st.button("Predict result")
+    if ok:
+        output = predict_fight(draws, losses, wins,
+                               opponent_wins, opponent_losses, opponent_draws, (height-height_opponent),(age-age_opponent))
+        st.subheader(
+            f"The predicted result for our fighter is a {output[0].lower()}")
+
+
+if __name__ == '__main__':
+    main()
