@@ -4,7 +4,6 @@ import pickle
 from pathlib import Path
 from PIL import Image
 
-img = Image.open("boxing_winner.jpg")
 load_model = pickle.load(open('model.pkl', 'rb'))
 
 
@@ -33,7 +32,7 @@ def main():
         st.subheader(
             f"The predicted result for our fighter is a {output[0].lower()}")
 
-st.image(img)
+st.image("https://images.pexels.com/photos/3797/black-and-white-sport-fight-boxer.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
 
 if __name__ == '__main__':
     main()
