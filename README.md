@@ -45,7 +45,6 @@ There where mainly five questions I where interested in.
 Southpaws had a 5.7% higher winning rate than orthodox fighters but because this difference was so marginal I analyzed it further and bootstrapped the data to see if the difference is statistically significant. Bootstrapping works by resampling a sample n of the data x number of times to get a predictible confidence intervall for our sample statistic (the win-rate). By comparing the confidence intervals for both stances I concluded that they overlaped to much for me to be able to draw any conclusions.
 
 ![stances 1](https://user-images.githubusercontent.com/88820508/148268241-65517395-2f5b-44d8-a79d-2af8b18dd800.png)
-![stances](https://user-images.githubusercontent.com/96744665/148278216-979bc3ff-37e1-489c-9df6-f5de10166ce5.png)
 
 ![conf_int_stances](https://user-images.githubusercontent.com/88820508/148268280-eb841c70-964b-478a-ae54-0c6033d9494d.png)
 
