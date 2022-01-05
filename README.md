@@ -1,6 +1,6 @@
 # Can we create a beting edge with data-driven fight predictions?
 ![bet_boxing](https://user-images.githubusercontent.com/88820508/148267698-31d5748e-9434-4acc-a99e-efe87a966498.jpg)
-## [App](https://share.streamlit.io/gabriele-frattini/fight-prediction/main/app.py)
+# [App](https://share.streamlit.io/gabriele-frattini/fight-prediction/main/app.py)
 
 ***
 
