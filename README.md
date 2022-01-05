@@ -45,6 +45,7 @@ There where mainly five questions I where interested in.
 Southpaws had a 5.7% higher winning rate than orthodox fighters but because this difference was so marginal I analyzed it further and bootstrapped the data to see if the difference is statistically significant. Bootstrapping works by resampling a sample n of the data x number of times to get a predictible confidence intervall for our sample statistic (the win-rate). By comparing the confidence intervals for both stances I concluded that they overlaped to much for me to be able to draw any conclusions.
 
 ![stances 1](https://user-images.githubusercontent.com/88820508/148268241-65517395-2f5b-44d8-a79d-2af8b18dd800.png)
+![stances](https://user-images.githubusercontent.com/96744665/148278216-979bc3ff-37e1-489c-9df6-f5de10166ce5.png)
 
 ![conf_int_stances](https://user-images.githubusercontent.com/88820508/148268280-eb841c70-964b-478a-ae54-0c6033d9494d.png)
 
@@ -74,6 +75,7 @@ My hypothesis was that the heavy weight-class would have the highest percentage 
 
 ### Question five
 The importance of our variables was derived from the decreased impurity from a random forest classifier. The alghoritm works by partitioning random subsets of the data with the goal of making the classes in each subdivision as homogeneous as possible. The more mixed a class is, the more impure it is and the bar graph below display how much each variable on average contributed to decreasing the gini impurity. The result is a measure of variable-importance for determining which class (win,loss,draw) a fighter will belong to at the end of a fight.
+
 What I found was that the fighters previous loss records are undoubtedly the most important. Closely followed by their wins, height and experience differences. I was a bit suprised to find that the stance was not of relative importance, but it’s a good counter-argument if an orthodox fighter blames a loss for the different angles.
 
 ![feature importance](https://user-images.githubusercontent.com/96744665/148269061-fa3519eb-150f-44f5-a369-5496d073d74f.png)
